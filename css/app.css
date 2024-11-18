@@ -1,0 +1,9 @@
+html {
+  font-family: "Reddit Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+html,
+body {
+  height: fit-content;
+}
