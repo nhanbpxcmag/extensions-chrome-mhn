@@ -1,4 +1,4 @@
-const URL_CHROME_EXTENSIONS_DOC = "https://tools.maihuunhan.name.vn/phim?tab=name&name_movie=";
+const URL_CHROME_EXTENSIONS_DOC = "https://nhanbpx.maihuunhan.name.vn/phim?tab=name&name_movie=";
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.contextMenus.create({
     id: "JQsSCcC",

@@ -7,7 +7,7 @@
     "default_popup": "index.html",
     "default_icon": "favicon.png"
   },
-  "permissions": ["storage", "alarms", "contextMenus"],
+  "permissions": ["storage", "alarms", "contextMenus", "activeTab", "scripting"],
   "minimum_chrome_version": "102",
   "omnibox": {
     "keyword": "nhanp"
@@ -19,5 +19,25 @@
   "background": {
     "service_worker": "service-worker.js",
     "type": "module"
-  }
+  },
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/maps/*"],
+      "js": [
+        "/css/bootstrap/js/bootstrap.bundle.min.js",
+        "content/content-maps/init.js",
+        "content/content-maps/button-add.js",
+        "content/content-maps/modal.js",
+        "content/content-maps/index.js"
+      ],
+      "css": ["css/bootstrap/css/bootstrap.min.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["css/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

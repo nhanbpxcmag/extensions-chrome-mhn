@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
     });
   }
 });
-const URL_CHROME_EXTENSIONS_DOC = "https://tools.maihuunhan.name.vn/phim?tab=name&name_movie=";
+const URL_CHROME_EXTENSIONS_DOC = "https://nhanbpx.maihuunhan.name.vn/phim?tab=name&name_movie=";
 const NUMBER_OF_PREVIOUS_SEARCHES = 4;
 
 // Display the suggestions after user starts typing
@@ -31,7 +31,6 @@ chrome.omnibox.onInputEntered.addListener((input) => {
 });
 async function updateHistory(input) {
   const { apiSuggestions } = await chrome.storage.local.get("apiSuggestions");
-  console.log("🚀 --- updateHistory --- apiSuggestions:", apiSuggestions);
   if (apiSuggestions) {
     apiSuggestions.unshift(input);
     apiSuggestions.splice(NUMBER_OF_PREVIOUS_SEARCHES);
