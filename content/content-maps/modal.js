@@ -138,13 +138,13 @@ function updateModalContent(data = []) {
         `;
       let tableBody = "";
       for (let i = 0; i < data.length; i++) {
-        const { name, star, numVote, price } = data[i];
+        const { title, rating, votes, price, link } = data[i];
         tableBody += `
               <tr>
                 <th scope="row">${i + 1}</th>
-                <td>${name}</td>
-                <td>${star}</td>
-                <td>${numVote}</td>
+                <td>${title}</td>
+                <td>${rating}</td>
+                <td>${votes}</td>
                 <td>${price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</td>
               </tr>
             `;
