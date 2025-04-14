@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
     });
   }
 });
-const URL_CHROME_EXTENSIONS_DOC = "https://nhanbpx.maihuunhan.name.vn/phim?tab=name&name_movie=";
+const URL_CHROME_EXTENSIONS_DOC = "https://nhanbpx.maihuunhan.name.vn/app/phim?tab=name&name=";
 const NUMBER_OF_PREVIOUS_SEARCHES = 4;
 
 // Display the suggestions after user starts typing
