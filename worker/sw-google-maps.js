@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
   //   chrome.storage.local.set({ cssEnabled: true });
 });
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === "complete" && tab.url.includes(targetDomain)) {
+  if (tab && tab?.url && changeInfo.status === "complete" && tab.url.includes(targetDomain)) {
     chrome.tabs.sendMessage(tabId, { action: "injectCSS" });
   }
 });
