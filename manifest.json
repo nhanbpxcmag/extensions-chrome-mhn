@@ -7,7 +7,7 @@
     "default_popup": "index.html",
     "default_icon": "favicon.png"
   },
-  "permissions": ["storage", "alarms", "contextMenus", "activeTab", "scripting"],
+  "permissions": ["storage", "alarms", "contextMenus", "activeTab", "scripting", "tabs"],
   "minimum_chrome_version": "102",
   "omnibox": {
     "keyword": "nhanp"
